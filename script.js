@@ -53,14 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Navbar Scroll Effect
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.padding = '10px 0';
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        } else {
-            navbar.style.padding = '20px 0';
-            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
-        }
-    });
+
+    //footer year
+    const year = new Date().getFullYear();
+
+document.getElementById(
+  "copyright"
+).innerHTML = `© ${year} Myles. All rights reserved.`;
+
 });
