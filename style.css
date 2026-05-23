@@ -250,39 +250,19 @@ img {
 
 
 /* hero */
+
 .hero {
-
     position: relative;
-
     padding: 180px 0 120px;
-
     overflow: hidden;
-
     min-height: 100vh;
-
     display: flex;
     align-items: center;
-
     background:
-        radial-gradient(
-            circle at top right,
-            rgba(72,202,228,0.14),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at bottom left,
-            rgba(0,119,182,0.12),
-            transparent 35%
-        ),
-
+        radial-gradient(circle at top right, rgba(72,202,228,0.14), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(0,119,182,0.12), transparent 35%),
         #F8FDFF;
 }
-
-
-/* =========================
-   BACKGROUND BLURS
-========================= */
 
 .hero-blur {
 
@@ -320,10 +300,6 @@ img {
 }
 
 
-/* =========================
-   HERO WRAPPER
-========================= */
-
 .hero-wrapper {
 
     position: relative;
@@ -340,17 +316,9 @@ img {
 }
 
 
-/* =========================
-   HERO CONTENT
-========================= */
-
 .hero-content {
-
     max-width: 720px;
 }
-
-
-/* BADGE */
 
 .badge {
 
@@ -382,8 +350,6 @@ img {
 }
 
 
-/* HEADING */
-
 .hero h1 {
 
     font-size: 72px;
@@ -400,8 +366,6 @@ img {
 }
 
 
-/* GRADIENT TEXT */
-
 .hero h1 span {
 
     background: var(--gradient);
@@ -411,8 +375,6 @@ img {
     -webkit-text-fill-color: transparent;
 }
 
-
-/* PARAGRAPH */
 
 .hero p {
 
@@ -427,10 +389,6 @@ img {
     max-width: 640px;
 }
 
-
-/* =========================
-   STATS
-========================= */
 
 .hero-stats {
 
@@ -489,10 +447,6 @@ img {
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
-
 .hero-btns {
 
     display: flex;
@@ -503,10 +457,6 @@ img {
 }
 
 
-/* =========================
-   RIGHT SIDE VISUAL
-========================= */
-
 .hero-visual {
 
     display: flex;
@@ -514,8 +464,6 @@ img {
     justify-content: center;
 }
 
-
-/* GLASS CARD */
 
 .glass-card {
 
@@ -549,8 +497,6 @@ img {
 }
 
 
-/* TOP */
-
 .glass-top {
 
     display: flex;
@@ -570,8 +516,6 @@ img {
     background: var(--accent-color);
 }
 
-
-/* CONTENT */
 
 .glass-content {
 
@@ -605,26 +549,18 @@ img {
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 992px) {
 
     .hero-wrapper {
-
         grid-template-columns: 1fr;
-
         gap: 60px;
     }
 
     .hero h1 {
-
         font-size: 56px;
     }
 
     .hero-visual {
-
         justify-content: flex-start;
     }
 }
@@ -632,32 +568,26 @@ img {
 @media (max-width: 768px) {
 
     .hero {
-
         padding-top: 150px;
     }
 
     .hero h1 {
-
         font-size: 42px;
     }
 
     .hero p {
-
         font-size: 16px;
     }
 
     .hero-stats {
-
         gap: 14px;
     }
 
     .stat {
-
         width: 100%;
     }
 
     .glass-card {
-
         max-width: 100%;
     }
 }
@@ -1241,34 +1171,14 @@ section {
 
 /* footer */
 
-/* =========================
-   FOOTER
-========================= */
-
 footer {
-
     position: relative;
-
     overflow: hidden;
-
     padding: 100px 0 50px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #021227,
-            #03045E
-        );
-
+    background: linear-gradient(to bottom, #021227, #03045E);
     color: var(--white);
-
     text-align: center;
 }
-
-
-/* =========================
-   GLOW EFFECT
-========================= */
 
 .footer-glow {
 
@@ -1291,10 +1201,6 @@ footer {
 }
 
 
-/* =========================
-   FOOTER CONTENT
-========================= */
-
 .footer-content {
 
     position: relative;
@@ -1309,10 +1215,6 @@ footer {
     gap: 28px;
 }
 
-
-/* =========================
-   LOGO
-========================= */
 
 .footer-logo {
 
@@ -1330,10 +1232,6 @@ footer {
 }
 
 
-/* =========================
-   TEXT
-========================= */
-
 .footer-text {
 
     max-width: 600px;
@@ -1347,10 +1245,6 @@ footer {
 }
 
 
-/* =========================
-   SOCIALS
-========================= */
-
 .footer-socials {
 
     display: flex;
@@ -1360,8 +1254,6 @@ footer {
     margin-top: 10px;
 }
 
-
-/* ICONS */
 
 .footer-socials a {
 
@@ -1394,8 +1286,6 @@ footer {
 }
 
 
-/* Hover */
-
 .footer-socials a:hover {
 
     transform:
@@ -1408,8 +1298,6 @@ footer {
         0 0 25px rgba(72,202,228,0.18);
 }
 
-
-/* Pulse Ring */
 
 .footer-socials a::before {
 
@@ -1439,10 +1327,6 @@ footer {
 }
 
 
-/* =========================
-   DIVIDER
-========================= */
-
 .footer-divider {
 
     width: 100%;
@@ -1463,10 +1347,6 @@ footer {
 }
 
 
-/* =========================
-   COPYRIGHT
-========================= */
-
 #copyright {
 
     font-size: 14px;
@@ -1478,29 +1358,21 @@ footer {
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 768px) {
 
     footer {
-
         padding: 80px 0 40px;
     }
 
     .footer-logo {
-
         font-size: 34px;
     }
 
     .footer-text {
-
         font-size: 15px;
     }
 
     .footer-socials a {
-
         width: 50px;
         height: 50px;
     }
