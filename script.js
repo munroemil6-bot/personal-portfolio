@@ -56,9 +56,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //footer year
     const year = new Date().getFullYear();
+    document.getElementById(
+    "copyright"
+    ).innerHTML = `© ${year} Myles. All rights reserved.`;
 
-document.getElementById(
-  "copyright"
-).innerHTML = `© ${year} Myles. All rights reserved.`;
+    //links
+    /* =========================
+   COPY EMAIL
+========================= */
+
+function copyEmail() {
+
+    navigator.clipboard.writeText(
+        "munroemil6@gmail.com"
+    );
+
+    const msg =
+        document.getElementById(
+            "email-copy-msg"
+        );
+
+    msg.classList.add("show-copy");
+
+    setTimeout(() => {
+        msg.classList.remove("show-copy");
+    }, 2000);
+}
+
+
+/* =========================
+   COPY PHONE
+========================= */
+
+function copyPhone() {
+
+    navigator.clipboard.writeText(
+        "0723274962"
+    );
+
+    const msg =
+        document.getElementById(
+            "phone-copy-msg"
+        );
+
+    msg.classList.add("show-copy");
+
+    setTimeout(() => {
+        msg.classList.remove("show-copy");
+    }, 2000);
+}
 
 });
