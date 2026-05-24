@@ -61,49 +61,40 @@ document.addEventListener('DOMContentLoaded', () => {
     ).innerHTML = `© ${year} Myles. All rights reserved.`;
 
     //links
-    /* =========================
-   COPY EMAIL
-========================= */
+    function copyEmail() {
 
-function copyEmail() {
-
-    navigator.clipboard.writeText(
-        "munroemil6@gmail.com"
-    );
-
-    const msg =
-        document.getElementById(
-            "email-copy-msg"
+        navigator.clipboard.writeText(
+            "munroemil6@gmail.com"
         );
 
-    msg.classList.add("show-copy");
+        const msg =
+            document.getElementById(
+                "email-copy-msg"
+            );
 
-    setTimeout(() => {
-        msg.classList.remove("show-copy");
-    }, 2000);
-}
+        msg.classList.add("show-copy");
 
+        setTimeout(() => {
+            msg.classList.remove("show-copy");
+        }, 2000);
+    }
 
-/* =========================
-   COPY PHONE
-========================= */
+    function copyPhone() {
 
-function copyPhone() {
-
-    navigator.clipboard.writeText(
-        "0723274962"
-    );
-
-    const msg =
-        document.getElementById(
-            "phone-copy-msg"
+        navigator.clipboard.writeText(
+            "0723274962"
         );
 
-    msg.classList.add("show-copy");
+        const msg =
+            document.getElementById(
+                "phone-copy-msg"
+            );
 
-    setTimeout(() => {
-        msg.classList.remove("show-copy");
-    }, 2000);
-}
+        msg.classList.add("show-copy");
+
+        setTimeout(() => {
+            msg.classList.remove("show-copy");
+        }, 2000);
+    }
 
 });
