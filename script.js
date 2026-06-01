@@ -27,6 +27,87 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Projects Data
+    const projects = [
+        {
+            title: "Copyteque Cyber",
+            category: "Business & Services",
+            description: "A professional cyber and office supplies hub landing page for a Bungoma-based business.",
+            image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80",
+            link: "https://6a1170fd4f73ad234d44823d--sunny-figolla-b6b6ed.netlify.app/"
+        },
+        {
+            title: "Mutermko VTC",
+            category: "Education",
+            description: "A modern vocational training centre website showcasing courses, facilities, and admissions.",
+            image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
+            link: "https://mutermko-vtc.netlify.app/"
+        },
+        {
+            title: "Fineday General Store",
+            category: "E-Commerce",
+            description: "A clean, user-friendly storefront for a general store offering household essentials.",
+            image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
+            link: "https://munroemil6-bot.github.io/fineday-shop/"
+        },
+        {
+            title: "Royal Events Catering",
+            category: "Hospitality",
+            description: "An elegant hospitality website for premium catering and event management services.",
+            image: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80",
+            link: "https://munroemil6-bot.github.io/Royal-Events-Catering/"
+        }
+    ];
+
+    const projectsGrid = document.getElementById('projectsGrid');
+
+    function renderProjects(filter = 'all') {
+        if (!projectsGrid) return;
+
+        projectsGrid.innerHTML = '';
+        const filtered = filter === 'all' ? projects : projects.filter(project => project.category === filter);
+
+        filtered.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.innerHTML = `
+                <div class="project-img">
+                    <img src="${project.image}" alt="${project.title}">
+                </div>
+                <div class="project-info">
+                    <span class="category">${project.category}</span>
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="view-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            `;
+            projectsGrid.appendChild(card);
+        });
+    }
+
+    function setActiveFilter(button) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const category = this.dataset.category || 'all';
+            setActiveFilter(this);
+            renderProjects(category);
+        });
+    });
+
+    function animateSkillBars() {
+        document.querySelectorAll('.skill-progress').forEach(bar => {
+            const progress = bar.dataset.progress || bar.style.width;
+            bar.style.width = progress;
+        });
+    }
+
+    renderProjects();
+    animateSkillBars();
+
     // Contact Form Submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {

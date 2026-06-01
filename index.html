@@ -146,108 +146,43 @@ Git & GitHub</pre>
                 <h2>Featured Projects</h2>
                 <p>A selection of recent work showcasing design, strategy, and technical excellence.</p>
             </div>
-            <div class="project-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="Copyteque Cyber">
-                    </div>
-                    <div class="project-info">
-                        <span class="category">Business & Services</span>
-                        <h3>Copyteque Cyber</h3>
-                        <p>A professional cyber and office supplies hub landing page for a Bungoma-based business.</p>
-                        <a href="https://6a1170fd4f73ad234d44823d--sunny-figolla-b6b6ed.netlify.app/" target="_blank" rel="noopener noreferrer" class="view-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="Mutermko VTC">
-                    </div>
-                    <div class="project-info">
-                        <span class="category">Education</span>
-                        <h3>Mutermko VTC</h3>
-                        <p>A modern vocational training centre website showcasing courses, facilities, and admissions.</p>
-                        <a href="https://mutermko-vtc.netlify.app/" target="_blank" rel="noopener noreferrer" class="view-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80" alt="Fineday Shop">
-                    </div>
-                    <div class="project-info">
-                        <span class="category">E-Commerce</span>
-                        <h3>Fineday General Store</h3>
-                        <p>A clean, user-friendly storefront for a general store offering household essentials.</p>
-                        <a href="https://munroemil6-bot.github.io/fineday-shop/" target="_blank" rel="noopener noreferrer" class="view-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" alt="Royal Events">
-                    </div>
-                    <div class="project-info">
-                        <span class="category">Hospitality</span>
-                        <h3>Royal Events Catering</h3>
-                        <p>An elegant hospitality website for premium catering and event management services.</p>
-                        <a href="https://munroemil6-bot.github.io/Royal-Events-Catering/" target="_blank" rel="noopener noreferrer" class="view-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="Business & Services">Business & Services</button>
+                <button class="filter-btn" data-category="Education">Education</button>
+                <button class="filter-btn" data-category="E-Commerce">E-Commerce</button>
+                <button class="filter-btn" data-category="Hospitality">Hospitality</button>
             </div>
+
+            <div class="projects-grid" id="projectsGrid"></div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <div class="skills-wrapper">
-                <div class="skills-content">
-                    <h2>Technical Skills</h2>
-                    <p>My current proficiency levels in key frontend technologies.</p>
-                    <div class="skill-bars">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>HTML</span>
-                                <span>68%</span>
-                            </div>
-                            <div class="progress-line" data-percent="68%">
-                                <span style="width: 68%;"></span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>CSS</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="progress-line" data-percent="70%">
-                                <span style="width: 70%;"></span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>JavaScript</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="progress-line" data-percent="70%">
-                                <span style="width: 70%;"></span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>React</span>
-                                <span>73%</span>
-                            </div>
-                            <div class="progress-line" data-percent="73%">
-                                <span style="width: 73%;"></span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <p>My proficiency levels in key technologies.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-name"><span>HTML</span><span>68%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="68%"></div></div>
                 </div>
-                <div class="skills-text">
-                    <h3>Currently Learning</h3>
-                    <p>I'm actively studying backend development to expand my skill set and become a full-stack developer. This includes learning server-side technologies and database management to complement my strong frontend expertise.</p>
+                <div class="skill-item">
+                    <div class="skill-name"><span>CSS</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="70%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>JavaScript</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="70%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>React</span><span>73%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-progress="73%"></div></div>
                 </div>
             </div>
         </div>
@@ -257,7 +192,7 @@ Git & GitHub</pre>
     <section class="services">
         <div class="container">
             <div class="section-header">
-                <h2>What I Do</h2>
+                <h2>What I Offer</h2>
                 <p>Specialized services tailored to bring your vision to life.</p>
             </div>
             <div class="services-grid">
@@ -285,20 +220,111 @@ Git & GitHub</pre>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What People Say</h2>
+                <p>Client and collaborator feedback that reflects quality, reliability, and strong communication.</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Myles delivered an exceptional frontend solution. His attention to detail and React expertise transformed our user experience."</p>
+                    <div class="testimonial-author">
+                        <span>Sarah Johnson</span>
+                        <small>Product Manager, Tech Startup</small>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Working with Myles was seamless. He understood the design vision perfectly and brought it to life with clean, efficient code."</p>
+                    <div class="testimonial-author">
+                        <span>Alex Chen</span>
+                        <small>Design Lead, Creative Agency</small>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Myles is a talented developer who goes above and beyond. His problem-solving skills and communication are outstanding."</p>
+                    <div class="testimonial-author">
+                        <span>Emma Davis</span>
+                        <small>CEO, E-commerce Platform</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="journey">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Journey</h2>
+                <p>Key milestones and achievements from my growth as a frontend developer and emerging full-stack engineer.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <h3>React Mastery</h3>
+                    <p>Achieved 73% proficiency in React development while building interactive UI and application state management.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <h3>Frontend Excellence</h3>
+                    <p>Built multiple responsive web applications with strong visual polish, performance optimization, and user-friendly design.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <h3>Backend Journey</h3>
+                    <p>Started learning backend development to expand into full-stack work and deliver complete web solutions.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <h3>Full Stack Vision</h3>
+                    <p>Working toward building end-to-end projects that combine clean frontend interfaces with dependable backend services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-wrapper">
+            <div class="about-grid">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="WhatsApp Image 2026-05-22 at 3.44.27 PM.jpeg" alt="Myles Munroe">
+                    </div>
+                    <div class="profile-name">Myles Munroe</div>
+                    <div class="profile-title">Frontend Developer & Student</div>
+                    <p style="text-align: center; color: rgba(18, 48, 74, 0.7); margin: 1rem 0;">Crafting thoughtful, responsive experiences with modern frontend tools while learning backend development to support full-stack growth.</p>
+                </div>
                 <div class="about-content">
                     <h2>About Me</h2>
-                    <p>I'm Myles Munroe, a dedicated frontend developer with a passion for creating beautiful, functional web experiences. With strong proficiency in HTML, CSS, JavaScript, and React, I specialize in building responsive and interactive user interfaces.</p>
-                    <p>Currently, I'm expanding my skill set by studying backend development. My goal is to become a full-stack developer capable of building complete, scalable web applications. I'm committed to continuous learning and staying updated with the latest web technologies.</p>
-                    <a href="tel:0723274962" class="btn btn-primary">Call Me</a>
-                </div>
-                <div class="about-img">
-                    <div class="img-placeholder">
-                        <img src="WhatsApp Image 2026-05-22 at 3.44.27 PM.jpeg" alt="Myles Munroe" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
-                    </div>
+                    <p>I'm Myles Munroe, a dedicated frontend developer who builds immersive, responsive web experiences with HTML, CSS, JavaScript, and React. I enjoy turning creative ideas into polished, usable interfaces that feel modern and fast.</p>
+                    <p>Currently, I’m expanding my skills toward backend development so I can build end-to-end web applications. My approach focuses on clean code, strong visuals, and seamless user interactions.</p>
+                    <p>From business landing pages to e-commerce storefronts and educational sites, I design with clarity, performance, and real user needs in mind.</p>
                 </div>
             </div>
         </div>
