@@ -16,6 +16,8 @@ A personal portfolio website showcasing my frontend development projects, skills
 - HTML5
 - CSS3 (custom properties, CSS Grid, Flexbox)
 - Vanilla JavaScript
+- React
+- Python
 - Font Awesome 6
 - Google Fonts (Inter)
 

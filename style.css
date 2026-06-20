@@ -844,15 +844,60 @@ section {
 }
 
 .projects-grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 420px;
     gap: 28px;
     margin-top: 60px;
+    max-height: calc(2 * 420px + 28px);
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    padding-right: 8px;
+}
+
+.projects-grid::after {
+    content: "";
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+    background: linear-gradient(to top, #F8FDFF, rgba(248, 253, 255, 0));
+    z-index: 1;
+}
+
+.projects-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: rgba(3, 4, 94, 0.05);
+    border-radius: 999px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: rgba(3, 4, 94, 0.25);
+    border-radius: 999px;
+}
+
+.project-card {
+    position: relative;
+    height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #111;
+    transition: all 0.45s ease;
+    cursor: pointer;
+    scroll-snap-align: start;
 }
 
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
+        grid-auto-rows: 380px;
+        max-height: calc(2 * 380px + 28px);
     }
 }
 

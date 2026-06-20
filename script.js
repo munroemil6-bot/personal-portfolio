@@ -51,6 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
             link: "https://munroemil6-bot.github.io/fineday-shop/"
         },
         {
+            title: "Campus Lost & Found System",
+            category: "Education",
+            description: "A campus lost and found platform with frontend and backend integration for reporting and recovering items.",
+            image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+            link: "https://campus-lost-found-frontend-latest.onrender.com/"
+        },
+        {
             title: "Royal Events Catering",
             category: "Hospitality",
             description: "An elegant hospitality website for premium catering and event management services.",
