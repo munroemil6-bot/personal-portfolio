@@ -63,6 +63,22 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "An elegant hospitality website for premium catering and event management services.",
             image: "https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80",
             link: "https://munroemil6-bot.github.io/Royal-Events-Catering/"
+        },
+        {
+            title: "PesaFlow Money Transfer",
+            category: "Full-Stack",
+            description: "A React and Vite wallet platform with transfers, beneficiaries, transaction history, user accounts, and admin analytics.",
+            image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
+            link: "https://pesaflow-frontend-2.vercel.app/",
+            source: "https://github.com/munroemil6-bot/pesaflow-frontend"
+        },
+        {
+            title: "BookBarn Library System",
+            category: "Full-Stack",
+            description: "A responsive React library frontend connected to a Flask REST API for books, borrowing, returns, users, and administration.",
+            image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80",
+            link: "https://library-management-system-frontend-jade.vercel.app/login",
+            source: "https://github.com/munroemil6-bot/library-management-system-frontend"
         }
     ];
 
@@ -85,7 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="category">${project.category}</span>
                     <h3>${project.title}</h3>
                     <p>${project.description}</p>
-                    <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="view-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-links">
+                        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="view-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                        ${project.source ? `<a href="${project.source}" target="_blank" rel="noopener noreferrer" class="source-link"><i class="fab fa-github"></i> Source</a>` : ''}
+                    </div>
                 </div>
             `;
             projectsGrid.appendChild(card);

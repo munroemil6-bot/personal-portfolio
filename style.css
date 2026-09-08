@@ -734,6 +734,26 @@ section {
     transform: translateX(5px);
 }
 
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+    padding: 12px 8px;
+}
+
+.source-link:hover {
+    color: var(--accent-color);
+}
+
 @media (max-width: 768px) {
 
     .project-grid {
@@ -925,6 +945,8 @@ section {
 .skill-name {
     display: flex;
     justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
     font-weight: 700;
     color: var(--dark-color);
