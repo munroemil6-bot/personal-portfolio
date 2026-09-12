@@ -134,31 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
     animateSkillBars();
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // For a static site, we can't send actual emails without a backend.
-            // We'll simulate a success message or use a mailto link.
-            
-            const subject = encodeURIComponent(`Contact from Portfolio: ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-            
-            // Redirect to mailto
-            window.location.href = `mailto:munroemil6@gmail.com?subject=${subject}&body=${body}`;
-            
-            alert('Thank you for your message! Your email client will now open to send the message.');
-            contactForm.reset();
-        });
-    }
-
     // Navbar Scroll Effect
 
     //footer year

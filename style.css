@@ -1272,7 +1272,7 @@ section {
 
 .contact-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: minmax(0, 760px);
     gap: 80px;
 }
 
@@ -1506,39 +1506,6 @@ section {
 
 .github-card .contact-link:hover::after {
     width: 100%;
-}
-
-
-
-/* form */
-
-.contact-form {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 16px;
-    outline: none;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(50, 146, 249, 0.1);
 }
 
 
