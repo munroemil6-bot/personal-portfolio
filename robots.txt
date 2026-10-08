@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://munroemil6-bot.github.io/personal-portfolio/sitemap.xml

@@ -31,6 +31,18 @@ A personal portfolio website showcasing my full-stack web development projects, 
 - Project category filters and animated role text
 - Smooth scroll navigation
 - Contact form that opens the user's email client
+- Search-engine title, description, canonical URL, social sharing metadata, and Person/WebSite structured data
+- `robots.txt` and XML sitemap for crawler discovery
+
+## Search Engine Indexing
+
+The site is configured for crawling and declares its canonical GitHub Pages URL. After GitHub Pages has deployed the latest commit:
+
+1. Open Google Search Console and verify the property `https://munroemil6-bot.github.io/personal-portfolio/`.
+2. Submit `https://munroemil6-bot.github.io/personal-portfolio/sitemap.xml` in the Sitemaps report.
+3. Use URL Inspection on the homepage to request indexing.
+
+Indexing is controlled by search engines and is not guaranteed or immediate.
 
 ## Getting Started
 
