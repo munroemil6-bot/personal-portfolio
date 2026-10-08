@@ -1,33 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    
-    if (menuToggle) {
+
+    function setMenuOpen(isOpen) {
+        if (!menuToggle || !navLinks) return;
+
+        navLinks.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-xmark', isOpen);
+            icon.classList.toggle('fa-bars', !isOpen);
+        }
+    }
+
+    if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+        });
+
+        document.addEventListener('click', event => {
+            if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+                setMenuOpen(false);
+            }
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                setMenuOpen(false);
+                menuToggle.focus();
+            }
         });
     }
 
-    // Smooth Scrolling for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+        anchor.addEventListener('click', event => {
+            const target = document.getElementById(anchor.hash.slice(1));
             if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                }
+                event.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                setMenuOpen(false);
             }
         });
     });
 
-    // Projects Data
+    const typedRole = document.querySelector('.typed-role');
+    const roles = ['Full-Stack Developer', 'React & Python Developer', 'Web Application Builder'];
+
+    if (typedRole && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        let roleIndex = 0;
+        let characterIndex = roles[0].length;
+        let deleting = true;
+
+        function animateRole() {
+            const role = roles[roleIndex];
+            typedRole.textContent = role.slice(0, characterIndex);
+
+            if (deleting) {
+                characterIndex -= 1;
+                if (characterIndex < 0) {
+                    deleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    characterIndex = 0;
+                }
+                window.setTimeout(animateRole, deleting ? 55 : 350);
+            } else {
+                characterIndex += 1;
+                if (characterIndex > roles[roleIndex].length) {
+                    deleting = true;
+                    window.setTimeout(animateRole, 1800);
+                } else {
+                    window.setTimeout(animateRole, 80);
+                }
+            }
+        }
+
+        window.setTimeout(animateRole, 1800);
+    }
+
     const projects = [
         {
             title: "Copyteque Cyber",
@@ -114,6 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function setActiveFilter(button) {
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.setAttribute('aria-pressed', String(btn === button));
+        });
     }
 
     document.querySelectorAll('.filter-btn').forEach(button => {
@@ -134,49 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
     animateSkillBars();
 
-    // Navbar Scroll Effect
-
-    //footer year
     const year = new Date().getFullYear();
-    document.getElementById(
-    "copyright"
-    ).innerHTML = `© ${year} Myles. All rights reserved.`;
-
-    //links
-    function copyEmail() {
-
-        navigator.clipboard.writeText(
-            "munroemil6@gmail.com"
-        );
-
-        const msg =
-            document.getElementById(
-                "email-copy-msg"
-            );
-
-        msg.classList.add("show-copy");
-
-        setTimeout(() => {
-            msg.classList.remove("show-copy");
-        }, 2000);
+    const copyright = document.getElementById('copyright');
+    if (copyright) {
+        copyright.textContent = `© ${year} Myles. All rights reserved.`;
     }
-
-    function copyPhone() {
-
-        navigator.clipboard.writeText(
-            "0723274962"
-        );
-
-        const msg =
-            document.getElementById(
-                "phone-copy-msg"
-            );
-
-        msg.classList.add("show-copy");
-
-        setTimeout(() => {
-            msg.classList.remove("show-copy");
-        }, 2000);
-    }
-
 });

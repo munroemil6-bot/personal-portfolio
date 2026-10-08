@@ -5,11 +5,12 @@ A personal portfolio website showcasing my full-stack web development projects, 
 ## Live Sections
 
 - **Home** — Hero intro with a call-to-action
-- **Projects** — Featured work including PesaFlow, BookBarn, Copyteque Cyber, Fineday General Store, and Royal Events Catering
+- **About** — Developer profile, background, and portfolio highlights
 - **Skills** — Frontend, React, Python, Django, Flask, Docker, and SQL/database skills
-- **Services** — Frontend Development, React, UI/UX Design, and Python Backend Development
-- **About** — Full-stack background and current development focus
-- **Contact** — Contact form (mailto-based) and direct contact info
+- **Background** — Development milestones
+- **Projects** — Filterable featured work including PesaFlow, BookBarn, Copyteque Cyber, Fineday General Store, and Royal Events Catering
+- **Focus** — Frontend Development, React, UI/UX Design, and Python Backend Development
+- **Contact** — Direct email, WhatsApp, GitHub, and LinkedIn details
 
 ## Tech Stack
 
@@ -25,9 +26,10 @@ A personal portfolio website showcasing my full-stack web development projects, 
 
 ## Features
 
-- Responsive design with mobile hamburger menu
+- Centered hero and floating navigation menu across desktop and mobile
+- Responsive project, skills, and background layouts
+- Project category filters and animated role text
 - Smooth scroll navigation
-- Sticky navbar with scroll effect
 - Contact form that opens the user's email client
 
 ## Getting Started
