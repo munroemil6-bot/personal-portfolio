@@ -116,6 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
             link: "https://munroemil6-bot.github.io/Royal-Events-Catering/"
         },
         {
+            title: "Joy's Birthday Experience",
+            category: "Special Events",
+            description: "A personalized birthday celebration featuring interactive Porsche and Liverpool-themed galleries, music, and a heartfelt message.",
+            image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=800&q=80",
+            link: "https://joy-s-bday.vercel.app/"
+        },
+        {
             title: "PesaFlow Money Transfer",
             category: "Full-Stack",
             description: "A React and Vite wallet platform with transfers, beneficiaries, transaction history, user accounts, and admin analytics.",
