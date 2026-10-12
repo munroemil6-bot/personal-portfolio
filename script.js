@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: "Education",
             description: "A modern vocational training centre website showcasing courses, facilities, and admissions.",
             image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
-            link: "https://mutermko-vtc.netlify.app/"
+            link: "https://muteremuko-vtc.netlify.app/"
         },
         {
             title: "Fineday General Store",
