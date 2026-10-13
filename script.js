@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: "Business & Services",
             description: "A professional cyber and office supplies hub landing page for a Bungoma-based business.",
             image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80",
-            link: "https://6a1170fd4f73ad234d44823d--sunny-figolla-b6b6ed.netlify.app/"
+            link: "https://copyteque.netlify.app/"
         },
         {
             title: "Mutermko VTC",
